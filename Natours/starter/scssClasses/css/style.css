@@ -119,6 +119,24 @@ body {
   padding: 25rem 0;
   margin-top: -20vh; }
 
+/* line 7, sass/pages/_home.scss */
+.section-features {
+  padding: 20rem 0;
+  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url("../img/nat-4.jpg");
+  background-size: cover;
+  transform: skewY(-7deg) translateY(-20vh);
+  margin-top: -10rem; }
+  /* line 16, sass/pages/_home.scss */
+  .section-features > * {
+    transform: skewY(7deg); }
+
+/* line 22, sass/pages/_home.scss */
+.section-tours {
+  background-color: #f7f7f7;
+  padding: 25rem 0 15rem 0;
+  margin-top: -10rem;
+  border: 1px solid firebrick; }
+
 /* line 1, sass/layout/_header.scss */
 .header {
   height: 95vh;
@@ -238,6 +256,37 @@ body {
   background-color: #55c57a;
   color: #fff; }
 
+/* line 1, sass/components/_card.scss */
+.card {
+  perspective: 150rem;
+  -moz-perspective: 150rem;
+  position: relative; }
+  /* line 6, sass/components/_card.scss */
+  .card__side {
+    background-color: orangered;
+    color: blanchedalmond;
+    height: 50rem;
+    font-size: 2rem;
+    transition: all .8s;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    backface-visibility: hidden; }
+    /* line 18, sass/components/_card.scss */
+    .card__side--front {
+      background-color: orchid; }
+    /* line 22, sass/components/_card.scss */
+    .card__side--back {
+      background-color: blue;
+      transform: rotateY(180deg); }
+  /* line 28, sass/components/_card.scss */
+  .card:hover .card__side--front {
+    transform: rotateY(180deg); }
+  /* line 32, sass/components/_card.scss */
+  .card:hover .card__side--back {
+    transform: rotateY(-180deg); }
+
 /* line 1, sass/components/_composition.scss */
 .composition {
   position: relative; }
@@ -270,3 +319,24 @@ body {
   /* line 38, sass/components/_composition.scss */
   .composition:hover .composition__photo:not(:hover) {
     transform: scale(0.95); }
+
+/* line 1, sass/components/_feature_box.scss */
+.feature-box {
+  background-color: rgba(255, 255, 255, 0.8);
+  font-size: 1.5rem;
+  text-align: center;
+  padding: 2.5rem;
+  border-radius: 3px;
+  box-shadow: 0 1, 5rem4rem rgba(0, 0, 0, 0.15);
+  transition: transform .3s; }
+  /* line 11, sass/components/_feature_box.scss */
+  .feature-box__icon {
+    font-size: 6rem;
+    margin-bottom: .5rem;
+    display: inline-block;
+    background-image: linear-gradient(to right, #7ed56f, #28b485);
+    -webkit-background-clip: text;
+    color: transparent; }
+  /* line 22, sass/components/_feature_box.scss */
+  .feature-box:hover {
+    transform: translateY(-1.5rem) scale(1.03); }
